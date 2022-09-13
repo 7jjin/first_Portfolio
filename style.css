@@ -345,6 +345,12 @@ h3{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+}
+.work__projects.anim-out{
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
+    transition: all var(--animation-duration) ease-out;
 }
 .project{
     position:relative;
@@ -355,6 +361,9 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.project.invisible{
+    display: none;
 }
 .project__img{
     max-width: 100%;
