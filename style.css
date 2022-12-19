@@ -82,7 +82,7 @@
 body{
     margin: 0px;
     font-family: 'Open Sans', sans-serif;
-    cursor:default;
+    cursor:default;   /* 마우스 커서를 보톤 화살표로 지정 */
 }
 a{
     text-decoration: none;
@@ -93,7 +93,7 @@ ul{
     padding-left: 0px;
 }
 button{
-    background-color: transparent; 
+    background-color: transparent; /* 배경색을 없앰 */
     cursor: pointer;
     border:none;
     outline: none;
@@ -524,7 +524,7 @@ h3{
         width: 250px;
         height: 250px;
     }
-    }
+    
     .navbar__menu.open{
         display: block;
         transition: all var(--animation-duration) ease-in;

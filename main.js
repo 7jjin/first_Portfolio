@@ -1,6 +1,6 @@
 'use strict';
 
-// Make navbar transparent when it is on the top
+// Window의 높이가 Navbar의 높이보다 커졌을 경우 'navbar--dark'클래스를 추가
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll',()=>{
@@ -14,10 +14,11 @@ document.addEventListener('scroll',()=>{
 
 
 
-// Handle scrolling when tapping on the navbar menu
+// Navbar의 메뉴를 클릭했을때 해당 페이지로 이동
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click',(event) =>{
     const target = event.target;
+    console.log(target);
     const link = target.dataset.link;
     if(link ==null){
         return;
@@ -26,19 +27,19 @@ navbarMenu.addEventListener('click',(event) =>{
     scrollIntoView(link);
 });
 
-// Navbar toggle button for small screen
+// 작은 화면에서 토글 버튼을 눌렀을 경우 Navbar메뉴가 보이게 함
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 navbarToggleBtn.addEventListener('click',()=>{
     navbarMenu.classList.toggle('open');
 });
 
-// Handle scrolling when tapping on the navbar menu
+// Contact Me 버튼을 눌렀을 경우 Contact페이지로 이동
 const Contact = document.querySelector('.home__contact');
 Contact.addEventListener('click',()=>{
     scrollIntoView('#contact');
 });
 
-// Make home slowly fade to transparent as the window scrolls down
+// Scroll을 홈 화면에서 서서히 내릴 때 홈 화면이 투명해 지도록 함
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll',()=>{
@@ -47,7 +48,7 @@ document.addEventListener('scroll',()=>{
 
 
 
-// Show "arrow-up" button when scrolling done
+// 홈 화면의 1/2 내려갔을 경우 arrow-up버튼 활성화 
 const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll',()=>{
     if(window.scrollY > homeHeight /2){
@@ -57,12 +58,12 @@ document.addEventListener('scroll',()=>{
     }
 });
 
-// Handle click on the "arrow up" button
+// arrow-up버튼을 누르면 홈 화면으로 이동
 arrowUp.addEventListener('click',()=>{
     scrollIntoView('#home');
 })
 
-// Projects
+// 해당 프로젝트를 눌렀을 경우 해당 페이지로 이동한다
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
