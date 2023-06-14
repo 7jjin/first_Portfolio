@@ -134,7 +134,7 @@ h3{
 }
 #navbar.navbar--dark{
     background-color: rgb(200, 200, 86);
-    padding:8px;
+    padding:0px;
 }
 .navbar__menu{
     display: flex;
@@ -204,7 +204,7 @@ h3{
 /* Section common */
 .section{
     text-align: center;
-    padding:50px;
+    padding:20px;
     margin:auto;
 }
 .section__container{
@@ -215,7 +215,7 @@ h3{
 /* About */
 .about__majors{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 80px 0;
 }
 
@@ -373,6 +373,7 @@ h3{
     margin:2px;
     background-color: var(--color-light-white);
     display: flex;
+    border-radius: 20px;
     justify-content: center;
     align-items: center;
 }
@@ -380,8 +381,10 @@ h3{
     display: none;
 }
 .project__img{
-    max-width: 100%;
-    max-height: 100%;
+        border-radius: 10px;
+        box-shadow: 1px 0px 10px 5px #ff6863;
+        max-width: 80%;
+        max-height: 100%;
 }
 .project__description{
     position: absolute;
@@ -396,6 +399,10 @@ h3{
     opacity: 0;
     transform: translateY(10px);
     transition: all var(--animation-duration)ease-in;
+}
+
+.project__description span{
+    font-size: 13px;
 }
 .project:hover .project__description{
     opacity: 0.8;
@@ -414,6 +421,9 @@ h3{
     width: 50px;
     height: 2px;
     background-color: var(--color-dark-white);
+}
+#moblie{
+    max-height: 90%;
 }
 
 /* Testimonial */
@@ -463,11 +473,12 @@ h3{
 }
 
 .contact__title{
-    margin:32px 0;
+    font-size: 40px;
+    margin: 10px;
 }
 .contact__links{
     font-size: var(--font-large);
-    margin:24px 0;
+    margin:7px 0;
 }
 .contact__links i:hover{
     transform: scale(1.1);
@@ -537,7 +548,7 @@ h3{
     }
     .section{
         padding:16px;
-        padding-top: 40px;
+        padding-top: 18px;
     }
     .about__majors{
     flex-direction: column;
